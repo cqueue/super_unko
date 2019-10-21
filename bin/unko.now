@@ -1,0 +1,20 @@
+#!/bin/bash
+
+UNKO_NOW="$(date) うんこなう"
+
+simple_unko(){
+  echo "💩 < $UNKO_NOW"
+}
+
+king_unko(){
+  unko.shout "$UNKO_NOW"
+}
+
+if [ "$1" == "king" ] ; then
+  UNCOMMAND=king_unko
+else
+  UNCOMMAND=simple_unko
+fi
+
+$UNCOMMAND
+
